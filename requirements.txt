@@ -1,0 +1,8 @@
+asyncpg
+qdrant-client
+python-dotenv
+tiktoken
+openai
+pydub
+sounddevice
+langchain

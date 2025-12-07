@@ -1,55 +1,79 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: 0.0.0 → 1.0.0
+List of modified principles:
+  - PRINCIPLE_1_NAME → I. Hands-on Learning
+  - PRINCIPLE_2_NAME → II. Accuracy
+  - PRINCIPLE_3_NAME → III. Clarity
+  - PRINCIPLE_4_NAME → IV. Integration
+  - PRINCIPLE_5_NAME → V. Reproducibility
+Added sections:
+  - Key Standards
+  - Constraints
+  - Success Criteria
+  - Stakeholders
+  - Brand Voice
+Removed sections:
+  - None
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ⚠ pending
+  - .specify/templates/spec-template.md: ⚠ pending
+  - .specify/templates/tasks-template.md: ⚠ pending
+  - .specify/templates/commands/*.md: ⚠ pending
+Follow-up TODOs:
+  - None
+-->
+# Physical AI & Humanoid Robotics Book with RAG Chatbot Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Hands-on Learning
+All content and examples MUST prioritize practical, hands-on learning experiences. The book's design and exercises must enable readers to actively engage with the material and apply concepts directly.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Accuracy
+All technical details, including those related to ROS 2, Gazebo, Unity, NVIDIA Isaac, and OpenAI, MUST be thoroughly verified against official documentation and peer-reviewed sources to ensure correctness.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Clarity
+Content MUST be written for a beginner-to-intermediate audience, using clear, concise language and providing necessary context and explanations for complex topics.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Integration
+The RAG chatbot MUST strictly answer questions using only content derived from the book. Its responses MUST not introduce external information or make claims not supported by the book's text.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Reproducibility
+All code examples, simulations, and project setups provided within the book MUST be fully reproducible and runnable without errors by the target audience.
 
-### [PRINCIPLE_6_NAME]
+## Key Standards
 
+- Correct, runnable code examples.
+- References: Official documentation or peer-reviewed sources MUST be used and cited in APA style.
+- Docusaurus Markdown with clear diagrams.
+- Chatbot strictly uses book content.
 
-[PRINCIPLE__DESCRIPTION]
+## Constraints
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- The Docusaurus book MUST be deployed to GitHub Pages.
+- The book will comprise 4 modules plus a Capstone project, with a total word count between 10,000–15,000 words.
+- The RAG system will utilize OpenAI Agents/ChatKit, FastAPI, Neon Postgres, and Qdrant Cloud.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Success Criteria
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+- The book is live and accessible on GitHub Pages.
+- All included code and simulations run without errors.
+- The RAG chatbot accurately answers questions solely from the book's content.
+- All citations are verified, and the content is free of plagiarism.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Stakeholders
+
+- Students, educators, robotics community.
+
+## Brand Voice
+
+- Friendly, educational, professional.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution supersedes all other project practices. Amendments require thorough documentation, approval by stakeholders, and a clear migration plan for any affected components.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All pull requests and reviews MUST verify compliance with these principles. Complexity MUST be justified.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06

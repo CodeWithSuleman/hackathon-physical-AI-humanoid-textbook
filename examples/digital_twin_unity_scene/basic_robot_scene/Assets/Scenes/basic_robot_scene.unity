@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+Scene:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: basic_robot_scene
+  m_EditorClassIdentifier: 
+  m_EditorVersion: 2022.3.9f1
+  m_Modification:
+    m_EditorVersion: 2022.3.9f1
+    m_ServerBuild: 0
+    m_Platform: 
+    m_Has = 1
+    m_Is= 0
+    m_ExternalObjects: []
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_Script: {fileID: 0}
+  m_Build: {fileID: 0}

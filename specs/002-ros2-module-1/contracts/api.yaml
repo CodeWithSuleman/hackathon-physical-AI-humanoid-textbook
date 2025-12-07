@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: RAG Chatbot API
+  description: API for the RAG (Retrieval-Augmented Generation) chatbot.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+
+paths:
+  /chat:
+    post:
+      summary: Get an answer to a question from the book content.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: The user's question.
+                  example: "What is a ROS 2 node?"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  answer:
+                    type: string
+                    description: The answer generated from the book content.
+                    example: "A ROS 2 node is a fundamental element that performs computation."
+                  sources:
+                    type: array
+                    items:
+                      type: string
+                      description: The chapters and/or sections from the book used to generate the answer.
+                      example: "Chapter 1, Section 2"
+        "400":
+          description: Bad Request - The request body is invalid.
+        "500":
+          description: Internal Server Error - An error occurred on the server.
