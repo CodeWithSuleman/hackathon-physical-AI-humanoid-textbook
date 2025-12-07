@@ -2,6 +2,7 @@
   "label": "Module 1: The Robotic Nervous System",
   "position": 1,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "01-ros2-module-1/01-ros2-basics"
   }
 }
