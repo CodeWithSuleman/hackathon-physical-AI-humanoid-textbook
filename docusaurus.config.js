@@ -109,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'ROS 2 Module',
-                to: '/docs/01-ros2-module-1/intro',
+                to: '/docs/01-ros2-module-1/01-ros2-basics',
               },
             ],
           },
