@@ -48,7 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/giaic-hackathon/giaic-hackathonn/tree/main/',
+            'https://github.com/CodeWithSuleman/hackathon-physical-AI-humanoid-textbook/tree/main/physical-ai-textbook/',
         },
         blog: {
           showReadingTime: true,
@@ -59,7 +59,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/giaic-hackathon/giaic-hackathonn/tree/main/',
+            'https://github.com/CodeWithSuleman/hackathon-physical-AI-humanoid-textbook/tree/main/physical-ai-textbook/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -95,7 +95,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/giaic-hackathon/giaic-hackathonn',
+            href: 'https://github.com/CodeWithSuleman/hackathon-physical-AI-humanoid-textbook/tree/main/physical-ai-textbook',
             label: 'GitHub',
             position: 'right',
           },
@@ -109,19 +109,19 @@ const config = {
             items: [
               {
                 label: 'Module 1: The Robotic Nervous System',
-                to: '/docs/category/ros2-module-1',
+                to: '/docs/ros2-module-1/ros2-basics',
               },
               {
                 label: 'Module 2: Digital Twin Environments',
-                to: '/docs/category/digital-twin-module',
+                to: '/docs/digital-twin-module/gazebo-physics',
               },
               {
                 label: 'Module 3: The AI Brain',
-                to: '/docs/category/ai-robot-brain-module',
+                to: '/docs/ai-robot-brain-module/isaac-sim-basics',
               },
               {
                 label: 'Module 4: Capstone Project',
-                to: '/docs/category/capstone-autonomous-humanoid',
+                to: '/docs/capstone-autonomous-humanoid/voice-to-action',
               },
             ],
           },
@@ -151,7 +151,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/giaic-hackathon/giaic-hackathonn',
+                href: 'https://github.com/CodeWithSuleman/hackathon-physical-AI-humanoid-textbook/tree/main/physical-ai-textbook',
               },
             ],
           },

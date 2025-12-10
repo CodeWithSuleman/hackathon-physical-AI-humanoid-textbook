@@ -17,9 +17,9 @@ This book is designed to provide a comprehensive and hands-on introduction to th
 
 Begin your learning adventure by exploring our modules:
 
-*   [Module 1: The Robotic Nervous System (ROS 2)](/docs/category/ros2-module-1)
-*   [Module 2: The Digital Twin (Gazebo & Unity)](/docs/category/digital-twin-module)
-*   [Module 3: The AI-Robot Brain (NVIDIA Isaac™)](/docs/category/ai-robot-brain-module)
-*   [Module 4: Capstone Project: Full Autonomous Humanoid](/docs/category/capstone-autonomous-humanoid)
+*   [Module 1: The Robotic Nervous System (ROS 2)](/docs/ros2-module-1/ros2-basics)
+*   [Module 2: The Digital Twin (Gazebo & Unity)](/docs/digital-twin-module/gazebo-physics)
+*   [Module 3: The AI-Robot Brain (NVIDIA Isaac™)](/docs/ai-robot-brain-module/isaac-sim-basics)
+*   [Module 4: Capstone Project: Full Autonomous Humanoid](/docs/capstone-autonomous-humanoid/voice-to-action)
 
 We hope you enjoy building and learning with us!
