@@ -62,5 +62,5 @@ Large Language Models are revolutionizing cognitive planning in robotics by enab
 
 *   [OpenAI API Documentation](https://platform.openai.com/docs/api-reference)
 *   [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
-*   [ROS 2 Actions Conceptual Overview](https://docs.ros.org/en/humble/Concepts/Basic/Concepts-Actions.html)
+*   [ROS 2 Actions Conceptual Overview](https://docs.ros.org/en/rolling/Concepts/Basic/About-Actions.html)
 *   [VLA Research Papers (Google Scholar)](https://scholar.google.com/scholar?q=vision+language+action+robotics)

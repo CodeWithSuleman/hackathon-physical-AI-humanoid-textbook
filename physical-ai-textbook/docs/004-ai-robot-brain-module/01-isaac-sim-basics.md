@@ -86,6 +86,6 @@ NVIDIA Isaac Sim provides an unparalleled platform for photorealistic robotics s
 
 ## Further Reading
 
-*   [NVIDIA Isaac Sim Documentation](https://docs.omniverse.nvidia.com/isaacsim/latest/index.html)
-*   [Isaac Sim Tutorials](https://docs.omniverse.nvidia.com/isaacsim/latest/tutorials/index.html)
-*   [Synthetic Data Generation in Isaac Sim](https://docs.omniverse.nvidia.com/isaacsim/latest/reference/synthetic_data_generation.html)
+*   [NVIDIA Isaac Sim Documentation](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
+*   [Isaac Sim Tutorials](https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html)
+*   [Synthetic Data Generation in Isaac Sim](https://docs.isaacsim.omniverse.nvidia.com/latest/synthetic_data_generation/index.html)

@@ -63,6 +63,6 @@ Nav2 provides a powerful and flexible framework for autonomous navigation in ROS
 
 ## Further Reading
 
-*   [Nav2 Documentation](https://navigation.ros.org/documentation/index.html)
-*   [Nav2 Tutorials](https://navigation.ros.org/tutorials/index.html)
+*   [Nav2 Documentation](https://docs.nav2.org/getting_started/index.html)
+*   [Nav2 Tutorials](https://docs.nav2.org/tutorials/index.html)
 *   [ROS 2 Humanoid Robotics Research](https://www.google.com/search?q=ros2+humanoid+robot+navigation) (General search for advanced topics)

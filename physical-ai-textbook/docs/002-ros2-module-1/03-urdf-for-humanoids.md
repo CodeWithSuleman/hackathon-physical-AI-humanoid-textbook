@@ -178,7 +178,7 @@ After creating a URDF file, it's essential to inspect and validate its structure
 ## Further Reading
 
 *   [URDF Tutorials](http://wiki.ros.org/urdf/Tutorials)
-*   [ROS 2 URDF Documentation](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/index.html)
+*   [ROS 2 URDF Documentation](https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/URDF-Main.html)
 
 ---
 

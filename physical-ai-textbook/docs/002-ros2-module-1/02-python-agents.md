@@ -254,4 +254,4 @@ To run the `python_agent_publisher.py` script, follow these steps:
 ## Further Reading
 
 *   [rclpy Documentation](https://docs.ros.org/en/humble/p/rclpy/index.html)
-*   [ROS 2 Python Tutorials](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Writing-A-Simple-Publisher-And-Subscriber-Python.html)
+*   [ROS 2 Python Tutorials](https://www.theconstruct.ai/robotigniteacademy_learnros/ros-courses-library/ros2-basics-python/)

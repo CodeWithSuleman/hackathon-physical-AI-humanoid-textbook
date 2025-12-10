@@ -69,5 +69,5 @@ The mini-capstone project demonstrates the incredible potential of the Vision-La
 ## Further Reading
 
 *   [ROS 2 Actions (Advanced)](https://docs.ros.org/en/rolling/Tutorials/Advanced.html)
-*   [NVIDIA Isaac Sim & ROS Integration](https://docs.omniverse.nvidia.com/isaacsim/latest/ros_tutorials/index.html)
+*   [NVIDIA Isaac Sim & ROS Integration](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/install_ros.html)
 *   [LLM-Powered Robotics Research](https://www.google.com/search?q=LLM+robotics+integration+research) (General search)

@@ -66,4 +66,4 @@ NVIDIA Isaac ROS significantly enhances ROS 2's capabilities by providing hardwa
 
 *   [NVIDIA Isaac ROS Documentation](https://docs.nvidia.com/isaac/ros/index.html)
 *   [Isaac ROS Visual SLAM](https://docs.nvidia.com/isaac/ros/visual_slam/index.html)
-*   [ROS 2 Navigation Stack (Nav2)](https://navigation.ros.org/)
+*   [ROS 2 Navigation Stack (Nav2)](https://docs.nav2.org/)

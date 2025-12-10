@@ -90,5 +90,5 @@ Unity offers a rich and flexible platform for high-fidelity robotics simulation.
 ## Further Reading
 
 *   [Unity Robotics Hub](https://github.com/Unity-Technologies/Unity-Robotics-Hub)
-*   [Unity Learn - Getting Started](https://learn.unity.com/tutorial/get-started-with-unity)
+*   [Unity Learn - Getting Started](https://unity.com/learn/get-started)
 *   [Unity Universal Render Pipeline (URP) Documentation](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest/index.html)

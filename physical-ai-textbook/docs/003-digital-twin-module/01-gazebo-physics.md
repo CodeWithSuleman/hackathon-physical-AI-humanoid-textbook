@@ -154,5 +154,5 @@ Gazebo's physics engine is a cornerstone of realistic robotics simulation. By un
 ## Further Reading
 
 *   [Gazebo Documentation](https://gazebosim.org/docs)
-*   [SDF Format Reference](http://sdformat.org/spec?ver=1.9&elem=root)
+*   [SDF Format Reference](https://gazebosim.org/libs/sdformat/)
 *   [ROS 2 Gazebo Tutorials](https://classic.gazebosim.org/tutorials?tut=ros2_overview)

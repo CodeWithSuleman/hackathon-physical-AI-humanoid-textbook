@@ -69,4 +69,4 @@ Accurate sensor simulation is a vital part of building effective digital twins f
 ## Further Reading
 
 *   [Gazebo Sensor Documentation](https://gazebosim.org/docs/latest/sensors)
-*   [Unity Robotics Sensors](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/ros_unity_integration/6_sensors.md)
+*   [Unity Robotics Sensors](https://unity.com/blog/engine-platform/robotics-simulation-is-easy-as-1-2-3)
