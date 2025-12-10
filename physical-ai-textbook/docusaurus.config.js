@@ -18,15 +18,16 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://giaic-hackathon.github.io',
+  url: 'https://CodeWithSuleman.github.io',
+
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/giaic-hackathonn/',
+  baseUrl: '/hackathon-physical-AI-humanoid-textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'giaic-hackathon', // Usually your GitHub org/user name.
-  projectName: 'giaic-hackathonn', // Usually your repo name.
+  organizationName: 'CodeWithSuleman', // Usually your GitHub org/user name.
+  projectName: 'hackathon-physical-AI-humanoid-textbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
