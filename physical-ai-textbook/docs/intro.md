@@ -1,5 +1,9 @@
 # Welcome to the Physical AI & Humanoid Robotics Book!
 
+| title | description |
+| :--- | :--- |
+| **Physical AI & Humanoid Robotics Textbook** | A Docusaurus-powered curriculum for **Physical AI**, **ROS 2**, simulation, **VLA systems** and **humanoid robotics** |
+
 This book is designed to provide a comprehensive and hands-on introduction to the exciting world of physical AI and humanoid robotics. Whether you're a beginner or an intermediate student, you'll find practical insights and examples to help you build a strong foundation in this rapidly evolving field.
 
 ## What You'll Learn
@@ -13,9 +17,9 @@ This book is designed to provide a comprehensive and hands-on introduction to th
 
 Begin your learning adventure by exploring our modules:
 
-*   [Module 1: The Robotic Nervous System (ROS 2)](/docs/ros2-module-1/ros2-basics)
-*   [Module 2: The Digital Twin (Gazebo & Unity)](/docs/digital-twin-module/gazebo-physics)
-*   [Module 3: The AI-Robot Brain (NVIDIA Isaac™)](/docs/ai-robot-brain-module/isaac-sim-basics)
-*   [Module 4: Capstone Project: Full Autonomous Humanoid](/docs/capstone-autonomous-humanoid/voice-to-action)
+*   [Module 1: The Robotic Nervous System (ROS 2)](/docs/category/ros2-module-1)
+*   [Module 2: The Digital Twin (Gazebo & Unity)](/docs/category/digital-twin-module)
+*   [Module 3: The AI-Robot Brain (NVIDIA Isaac™)](/docs/category/ai-robot-brain-module)
+*   [Module 4: Capstone Project: Full Autonomous Humanoid](/docs/category/capstone-autonomous-humanoid)
 
 We hope you enjoy building and learning with us!

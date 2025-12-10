@@ -91,7 +91,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'ROS 2 Module',
+            label: 'Modules',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -105,11 +105,23 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Modules',
             items: [
               {
-                label: 'ROS 2 Module',
-                to: '/docs/ros2-module-1/ros2-basics',
+                label: 'Module 1: The Robotic Nervous System',
+                to: '/docs/category/ros2-module-1',
+              },
+              {
+                label: 'Module 2: Digital Twin Environments',
+                to: '/docs/category/digital-twin-module',
+              },
+              {
+                label: 'Module 3: The AI Brain',
+                to: '/docs/category/ai-robot-brain-module',
+              },
+              {
+                label: 'Module 4: Capstone Project',
+                to: '/docs/category/capstone-autonomous-humanoid',
               },
             ],
           },

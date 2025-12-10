@@ -60,4 +60,4 @@ OpenAI Whisper serves as a powerful front-end for our VLA pipeline, accurately c
 
 *   [OpenAI Whisper GitHub](https://github.com/openai/whisper)
 *   [OpenAI Whisper Paper](https://arxiv.org/abs/2212.04356)
-*   [ROS 2 Actions Documentation](https://docs.ros.org/en/humble/Tutorials/Actions/Understanding-ROS2-Actions.html)
+*   [ROS 2 Actions Documentation](https://docs.ros.org/en/rolling/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html)
