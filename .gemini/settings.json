@@ -3,7 +3,7 @@
         "github": {
             "httpUrl": "https://api.githubcopilot.com/mcp/",
             "headers": {
-                "Authorization": "YOUR_GITHUB_TOKEN"
+                "Authorization": "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"
             }
         }
     }

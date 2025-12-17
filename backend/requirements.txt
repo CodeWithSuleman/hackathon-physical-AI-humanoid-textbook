@@ -1,0 +1,10 @@
+cohere
+qdrant-client
+beautifulsoup4
+requests
+python-dotenv
+fastapi
+openai
+uvicorn
+httpx
+google.generativeai
