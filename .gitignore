@@ -22,4 +22,4 @@ venv/
 *.tmp
 *.swp
 
-.gemini/settings.json
+.gemini/
