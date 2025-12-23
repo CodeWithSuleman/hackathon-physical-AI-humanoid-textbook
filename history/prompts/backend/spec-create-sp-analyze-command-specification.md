@@ -1,4 +1,29 @@
 ---
+id: phr-backend-spec-20251220-1
+title: Create sp.analyze Command Specification
+stage: spec
+date: 2025-12-20
+surface: cli
+model: Gemini
+feature: backend
+branch: 003-rag-agent-fastapi
+user: {{USER}}
+command: Prompt
+labels: [spec, command-definition]
+links:
+  spec: {{LINKS_SPEC}}
+  ticket: {{LINKS_TICKET}}
+  adr: {{LINKS_ADR}}
+  pr: {{LINKS_PR}}
+files:
+  - .gemini/commands/sp.analyze.toml
+tests:
+{{TESTS_YAML}}
+---
+
+## Prompt
+
+---
 description: Perform a non-destructive cross-artifact consistency and quality analysis across spec.md, plan.md, and tasks.md after task generation.
 ---
 
@@ -30,8 +55,7 @@ Run `.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -In
 - PLAN = FEATURE_DIR/plan.md
 - TASKS = FEATURE_DIR/tasks.md
 
-Abort with an error message if any required file is missing (instruct the user to run missing prerequisite command).
-For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
+Abort with an error message if any required file is missing (instruct the user to run missing prerequisite command). For single quotes in args like "I'm Groot", use escape syntax: e.g 'I'\''m Groot' (or double-quote if possible: "I'm Groot").
 
 ### 2. Load Artifacts (Progressive Disclosure)
 
@@ -182,4 +206,48 @@ Ask the user: "Would you like me to suggest concrete remediation edits for the t
 ## Context
 
 backend
-```
+
+---
+
+As the main request completes, you MUST create and complete a PHR (Prompt History Record) using agent‑native tools when possible.
+
+1) Determine Stage
+   - Stage: constitution | spec | plan | tasks | red | green | refactor | explainer | misc | general
+
+2) Generate Title and Determine Routing:
+   - Generate Title: 3–7 words (slug for filename)
+   - Route is automatically determined by stage:
+     - `constitution` → `history/prompts/constitution/`
+     - Feature stages → `history/prompts/<feature-name>/` (spec, plan, tasks, red, green, refactor, explainer, misc)
+     - `general` → `history/prompts/general/`
+
+3) Create and Fill PHR (Shell first; fallback agent‑native)
+   - Run: `.specify/scripts/bash/create-phr.sh --title "<title>" --stage <stage> [--feature <name>] --json`
+   - Open the file and fill remaining placeholders (YAML + body), embedding full PROMPT_TEXT (verbatim) and concise RESPONSE_TEXT.
+   - If the script fails:
+     - Read `.specify/templates/phr-template.prompt.md` (or `templates/…`)
+     - Allocate an ID; compute the output path based on stage from step 2; write the file
+     - Fill placeholders and embed full PROMPT_TEXT and concise RESPONSE_TEXT
+
+4) Validate + report
+   - No unresolved placeholders; path under `history/prompts/` and matches stage; stage/title/date coherent; print ID + path + stage + title.
+   - On failure: warn, don't block. Skip only for `/sp.phr`.
+
+## Response snapshot
+
+Created the command specification file at `.gemini/commands/sp.analyze.toml`.
+
+## Outcome
+
+- ✅ Impact: Created a new command specification for `/sp.analyze`.
+- 🧪 Tests: N/A
+- 📁 Files: Created 1 file.
+- 🔁 Next prompts: N/A
+- 🧠 Reflection: The bash script for PHR creation failed on Windows. The manual fallback process worked.
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: {{FAILURE_MODES}}
+- Graders run and results (PASS/FAIL): {{GRADER_RESULTS}}
+- Prompt variant (if applicable): {{PROMPT_VARIANT_ID}}
+- Next experiment (smallest change to try): {{NEXT_EXPERIMENT}}

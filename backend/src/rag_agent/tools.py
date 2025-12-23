@@ -5,7 +5,7 @@ import logging
 from backend.src.retrieval.main import retrieve_chunks
 
 logger = logging.getLogger(__name__)
-
+#.
 class RetrievalTool:
     """
     Tool to retrieve relevant chunks from the vector database.
