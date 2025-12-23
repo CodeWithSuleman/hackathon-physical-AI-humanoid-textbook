@@ -7,7 +7,7 @@ app = FastAPI()
 @app.get("/")
 def health():
     return {"status": "ok"}
-
+#.
 @app.post("/query", response_model=AgentResponse)
 async def query_endpoint(request: QueryRequest):
     if not request.question:

@@ -5,7 +5,7 @@ from agents import Agent, Runner, function_tool, AsyncOpenAI, OpenAIChatCompleti
 from backend.src.retrieval.main import retrieve_chunks
 
 load_dotenv()
-
+#.
 openrouter_api_key = os.getenv("OPENROUTE_API_KEY")
 
 external_client = AsyncOpenAI(

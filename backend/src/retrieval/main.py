@@ -12,7 +12,6 @@ QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_COLLECTION_NAME = "rag_embedding" 
 
-
 co = cohere.Client(COHERE_API_KEY)
 
 def get_embedding(text: str) -> List[float]:
