@@ -4,20 +4,19 @@ import cohere
 from dotenv import load_dotenv
 from qdrant_client import QdrantClient
 
-# Environment variables load karein
+# Environment variables 
 load_dotenv()
 
-# API Keys aur Configuration
 COHERE_API_KEY = os.getenv("COHERE_API_KEY")
 QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_COLLECTION_NAME = "rag_embedding" 
 
-# Cohere Client setup
+
 co = cohere.Client(COHERE_API_KEY)
 
 def get_embedding(text: str) -> List[float]:
-    """Cohere ke zariye text ka vector banana."""
+    """converting text into vector through Cohere."""
     try:
         response = co.embed(
             texts=[text], 
@@ -30,11 +29,11 @@ def get_embedding(text: str) -> List[float]:
         return []
 
 def retrieve_chunks(query: str, top_k: int = 5) -> List[Dict[str, Any]]:
-    """Qdrant se relevant chunks nikalna."""
+    """Retrieve relevant chunks from Qdrant."""
     if not query:
         return []
 
-    # Qdrant Client initialize karein
+    # Initialize Qdrant client
     client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
 
     try:
@@ -42,7 +41,6 @@ def retrieve_chunks(query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         if not query_vector:
             return []
 
-        # query_points use kar rahe hain kyunke aapka client 'search' support nahi kar raha
         response = client.query_points(
             collection_name=QDRANT_COLLECTION_NAME,
             query=query_vector,
@@ -60,9 +58,9 @@ def retrieve_chunks(query: str, top_k: int = 5) -> List[Dict[str, Any]]:
                 }
             })
         
-        print(f"✅ Qdrant se {len(results)} chunks mil gaye.")
+        print(f"{len(results)} chunks has recieved from Qdrant.")
         return results
 
     except Exception as e:
-        print(f"❌ Qdrant Retrieval Error: {e}")
+        print(f"Qdrant Retrieval Error: {e}")
         return []

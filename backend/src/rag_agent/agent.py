@@ -1,55 +1,68 @@
 import os
-import json
-from openai import OpenAI
+import asyncio
 from dotenv import load_dotenv
+from agents import Agent, Runner, function_tool, AsyncOpenAI, OpenAIChatCompletionsModel, RunConfig
 from backend.src.retrieval.main import retrieve_chunks
 
 load_dotenv()
 
-# OpenAI Client setup for Gemini
-client = OpenAI(
-    api_key=os.getenv("GOOGLE_API_KEY"),
-    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+openrouter_api_key = os.getenv("OPENROUTE_API_KEY")
+
+external_client = AsyncOpenAI(
+    api_key=openrouter_api_key,
+    base_url="https://openrouter.ai/api/v1",
 )
 
-def chat_with_rag_agent(user_query: str):
+model = OpenAIChatCompletionsModel(
+    model="mistralai/devstral-2512:free",
+    openai_client=external_client,
+)
 
-    context_chunks = retrieve_chunks(user_query)
-    context_text = "\n".join([f"SOURCE: {c['metadata']['source_url']}\nCONTENT: {c['content']}" for c in context_chunks])
+config = RunConfig(
+    model=model,
+    model_provider=external_client,
+    tracing_disabled=True,
+)
+
+@function_tool
+def fetch_physical_ai_docs(query: str) -> str:
+    """
+    Physical AI database se information retrieve karne ke liye tool.
+    Ye function Cohere embeddings aur Qdrant use karta hai.
+    """
+    chunks = retrieve_chunks(query, top_k=5)
     
-    if not context_chunks:
-        context_text = "No relevant context found in the textbook."
-
-    messages = [
-        {
-            "role": "system", 
-            "content": "You are a Physical AI expert. Use the provided context to answer questions. Cite sources clearly."
-        },
-        {
-            "role": "user", 
-            "content": f"Context:\n{context_text}\n\nQuestion: {user_query}"
-        }
-    ]
-
-    try:
-        response = client.chat.completions.create(
-            model="gemini-1.5-flash", 
-            messages=messages,
-            temperature=0.1 
-        )
-
-        answer = response.choices[0].message.content
+    if not chunks:
+        return "No relevant documents found."
         
-        # Format sources like the example code
-        sources = list(set([c['metadata']['source_url'] for c in context_chunks]))
+    context = ""
+    for c in chunks:
+        context += f"\nContent: {c['content']}\nSource: {c['metadata'].get('source_url', 'N/A')}\n---"
+    return context
 
+rag_agent = Agent(
+    name="PhysicalAIAgent",
+    instructions="""
+    You are an expert Physical AI assistant. 
+    1. Always use 'fetch_physical_ai_docs' tool to find answers.
+    2. Base your answer ONLY on the retrieved context.
+    3. Cite the Source URL at the end of your response.
+    """,
+    tools=[fetch_physical_ai_docs],
+)
+
+async def chat_with_rag_agent(user_query: str):
+    try:
+        result = await Runner.run(
+            rag_agent,
+            input=user_query,
+            run_config=config
+        )
+        
         return {
-            "answer": answer,
-            "references": [{"url": src, "heading": "Textbook Chapter"} for src in sources]
+            "answer": str(result.final_output) if result.final_output else "I don't know.",
+            "references": [] 
         }
-
     except Exception as e:
-        error_msg = str(e)
-        if "429" in error_msg:
-            return {"answer": "⚠️ API Quota hit. Wait 30 seconds. Gemini 1.5-flash is busy.", "references": []}
-        return {"answer": f"Error: {error_msg}", "references": []}
+        print(f"Agent Error: {e}")
+        return {"answer": f"Error: {str(e)}", "references": []}
