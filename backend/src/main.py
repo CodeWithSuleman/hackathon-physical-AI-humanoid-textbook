@@ -1,9 +1,18 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from backend.src.rag_agent.agent import chat_with_rag_agent
 from backend.src.rag_agent.models import QueryRequest, AgentResponse
 
 app = FastAPI()
 
+# --- NEW: CORS Configuration ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://codewithsuleman.github.io"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 @app.get("/")
 def health():
     return {"status": "ok"}
